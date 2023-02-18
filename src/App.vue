@@ -3,6 +3,10 @@ import { useDark, useToggle } from "@vueuse/core";
 const isDark = useDark();
 const toggleDark = useToggle(isDark)
 
+$(function () {
+  $("#draggable2").draggable({ axis: "x" });
+});
+
 </script>
 
 <template>
@@ -160,7 +164,6 @@ const toggleDark = useToggle(isDark)
         </div>
       </div>
     </div>
-    
     <!-- Ruler Scale Start -->
     <div class="mt-5">
       <div class="flex justify-between mb-0">
@@ -246,7 +249,7 @@ const toggleDark = useToggle(isDark)
 
     <div class="h-24 relative mb-5">
       <img class="shadow-lg rounded-2xl w-full h-full" src="../src/assets/jellyfish2.jpg" alt="">
-      <div class=" w-48 h-24 border border-slate-100 rounded-2xl absolute mt-[-96px] z-50"></div>
+      <div id="draggable2" class=" w-48 h-24 border border-slate-100 rounded-2xl absolute mt-[-96px] z-50"></div>
     </div>
   </div>
 </template>
