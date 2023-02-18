@@ -167,6 +167,8 @@ $(function () {
     <!-- Ruler Scale Start -->
     <div class="mt-5">
       <div class="flex justify-between mb-0">
+        <span class="text-slate-900 dark:text-slate-100">0</span>
+        <span class="text-slate-900 dark:text-slate-100">0.5</span>
         <span class="text-slate-900 dark:text-slate-100">1</span>
         <span class="text-slate-900 dark:text-slate-100">1.5</span>
         <span class="text-slate-900 dark:text-slate-100">2</span>
@@ -176,8 +178,6 @@ $(function () {
         <span class="text-slate-900 dark:text-slate-100">4</span>
         <span class="text-slate-900 dark:text-slate-100">4.5</span>
         <span class="text-slate-900 dark:text-slate-100">5</span>
-        <span class="text-slate-900 dark:text-slate-100">5.5</span>
-        <span class="text-slate-900 dark:text-slate-100">6</span>
       </div>
       <div class="border-t border-slate-900 dark:border-slate-100">
         <div class="flex justify-between mb-2">
@@ -249,7 +249,7 @@ $(function () {
 
     <div class="h-24 relative mb-5">
       <img class="shadow-lg rounded-2xl w-full h-full" src="../src/assets/jellyfish2.jpg" alt="">
-      <div id="draggable2" class=" w-48 h-24 border border-slate-100 rounded-2xl absolute mt-[-96px] z-50"></div>
+      <div id="draggable2" class=" w-48 h-24 border border-slate-100 rounded-2xl absolute mt-[-96px] z-50 overflow-x-hidden"></div>
     </div>
   </div>
 </template>
