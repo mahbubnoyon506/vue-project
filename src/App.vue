@@ -3,17 +3,13 @@ import { useDark, useToggle } from "@vueuse/core";
 const isDark = useDark();
 const toggleDark = useToggle(isDark)
 
-$(function () {
-  $("#draggable2").draggable({ axis: "x" });
-});
-
 </script>
 
 <template>
   <div class="bg-gray-300 dark:bg-slate-800 p-2 lg:p-5">
     <div class="flex relative">
       <div
-        class="w-16 md:w-20 lg:w-24 h-80 lg:h-auto flex justify-center md:overflow-y-scroll lg:overflow-y-hidden sticky top-0">
+        class="w-16 md:w-20 lg:w-24 h-80 lg:h-auto flex justify-center md:overflow-y-scroll lg:overflow-y-hidden sticky top-0 ">
         <ul class="">
           <li
             class="my-1 cursor-pointer lg:my-7 text-xl text-slate-900 dark:text-slate-100 hover:bg-gray-400 dark:hover:text-slate-900 w-12 h-12 flex justify-center items-center rounded-full transition-all ease-in-out duration-500">
@@ -164,6 +160,7 @@ $(function () {
         </div>
       </div>
     </div>
+    
     <!-- Ruler Scale Start -->
     <div class="mt-5">
       <div class="flex justify-between mb-0">
@@ -249,7 +246,7 @@ $(function () {
 
     <div class="h-24 relative mb-5">
       <img class="shadow-lg rounded-2xl w-full h-full" src="../src/assets/jellyfish2.jpg" alt="">
-      <div id="draggable2" class=" w-48 h-24 border border-slate-100 rounded-2xl absolute mt-[-96px] z-50"></div>
+      <div class=" w-48 h-24 border border-slate-100 rounded-2xl absolute mt-[-96px] z-50"></div>
     </div>
   </div>
 </template>
@@ -292,34 +289,5 @@ $(document).ready(function () {
 </script>
 
 <style scoped>
-.draggable {
-  /* width: 90px;
-  height: 90px; */
-  padding: 0.5em;
-  float: left;
-  margin: 0 10px 10px 0;
-}
 
-#draggable2 {
-  margin-bottom: 20px;
-}
-
-#draggable {
-  cursor: n-resize;
-}
-
-#draggable2 {
-  cursor: e-resize;
-}
-
-/* #containment-wrapper {
-  width: 95%;
-  height: 150px;
-  border: 2px solid #ccc;
-  padding: 10px;
-} */
-
-/* h3 {
-  clear: left;
-} */
 </style>
