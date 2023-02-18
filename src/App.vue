@@ -12,7 +12,8 @@ $(function () {
 <template>
   <div class="bg-gray-300 dark:bg-slate-800 p-2 lg:p-5">
     <div class="flex relative">
-      <div class="w-16 md:w-20 lg:w-24 h-80 lg:h-auto flex justify-center md:overflow-y-scroll lg:overflow-y-hidden sticky top-0">
+      <div
+        class="w-16 md:w-20 lg:w-24 h-80 lg:h-auto flex justify-center md:overflow-y-scroll lg:overflow-y-hidden sticky top-0">
         <ul class="">
           <li
             class="my-1 cursor-pointer lg:my-7 text-xl text-slate-900 dark:text-slate-100 hover:bg-gray-400 dark:hover:text-slate-900 w-12 h-12 flex justify-center items-center rounded-full transition-all ease-in-out duration-500">
@@ -60,12 +61,12 @@ $(function () {
               </div>
             </div>
             <div class="flex">
-              <div
+              <div @click="toggleDark()"
                 class="cursor-pointer mr-2 w-8 md:w-12 h-8 md:h-12 p-3 bg-gray-400 dark:bg-gray-700 rounded-full flex justify-center items-center">
-                <font-awesome-icon @click="toggleDark()" class="text-lg md:text-xl text-slate-900 dark:text-slate-100"
-                  icon="fa-regular fa-moon" />
-                <font-awesome-icon @click="toggleDark()" class="text-lg md:text-xl text-slate-900 dark:text-slate-100"
+                <font-awesome-icon v-if='isDark' class="text-lg md:text-xl text-slate-900 dark:text-slate-100"
                   icon="fa-regular fa-sun" />
+                <font-awesome-icon v-else class="text-lg md:text-xl text-slate-900 dark:text-slate-100"
+                  icon="fa-regular fa-moon" />
               </div>
               <div
                 class="cursor-pointer mr-2 w-8 md:w-12 h-8 md:h-12 p-3 bg-gray-400 dark:bg-gray-700 rounded-full flex justify-center items-center">
@@ -163,13 +164,132 @@ $(function () {
         </div>
       </div>
     </div>
-    <div class="h-24 relative">
+    <!-- Ruler Scale Start -->
+    <div class="mt-5">
+      <div class="flex justify-between mb-0">
+        <span class="text-slate-900 dark:text-slate-100">1</span>
+        <span class="text-slate-900 dark:text-slate-100">1.5</span>
+        <span class="text-slate-900 dark:text-slate-100">2</span>
+        <span class="text-slate-900 dark:text-slate-100">2.5</span>
+        <span class="text-slate-900 dark:text-slate-100">3</span>
+        <span class="text-slate-900 dark:text-slate-100">3.5</span>
+        <span class="text-slate-900 dark:text-slate-100">4</span>
+        <span class="text-slate-900 dark:text-slate-100">4.5</span>
+        <span class="text-slate-900 dark:text-slate-100">5</span>
+        <span class="text-slate-900 dark:text-slate-100">5.5</span>
+        <span class="text-slate-900 dark:text-slate-100">6</span>
+      </div>
+      <div class="border-t border-slate-900 dark:border-slate-100">
+        <div class="flex justify-between mb-2">
+          <div class="h-12 border-l border-slate-900 dark:border-slate-100 flez justify-evenly"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-8 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-12 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-8 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-12 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-8 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-12 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-8 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-12 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-8 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-4 border-l border-slate-900 dark:border-slate-100"></div>
+          <div class="h-12 border-r border-slate-900 dark:border-slate-100"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Scale end -->
+
+    <div class="h-24 relative mb-5">
       <img class="shadow-lg rounded-2xl w-full h-full" src="../src/assets/jellyfish2.jpg" alt="">
-      <div id="draggable2" class="draggable ui-widget-content w-48 h-24 border border-slate-100 absolute mt-[-50px]"></div>
+      <div id="draggable2" class=" w-48 h-24 border border-slate-100 rounded-2xl absolute mt-[-96px] z-50"></div>
     </div>
   </div>
-  <button @click="toggleDark()" class="">Click here</button>
 </template>
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+  $('.dragger').mousedown(function (event) {
+    $(this)
+      .data('down', true)
+      .data('x', event.clientX)
+      .data('scrollLeft', this.scrollLeft)
+      .addClass("dragging");
+
+    return false;
+  }).mouseup(function (event) {
+    $(this)
+      .data('down', false)
+      .removeClass("dragging");
+  }).mousemove(function (event) {
+    if ($(this).data('down') == true) {
+      this.scrollLeft = $(this).data('scrollLeft') + $(this).data('x') - event.clientX;
+    }
+  }).mousewheel(function (event, delta) {
+    this.scrollLeft -= (delta * 30);
+  }).css({
+    'overflow': 'hidden',
+    'cursor': '-moz-grab'
+  });
+  $(window).mouseout(function (event) {
+    if ($('.team-form-data').data('down')) {
+      try {
+        if (event.originalTarget.nodeName == 'BODY' || event.originalTarget.nodeName == 'HTML') {
+          $('.team-form-data').data('down', false);
+        }
+      } catch (e) { }
+    }
+  });
+});
+</script>
 
 <style scoped>
 .draggable {
