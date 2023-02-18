@@ -62,20 +62,20 @@ $(function () {
             </div>
             <div class="flex">
               <div @click="toggleDark()"
-                class="cursor-pointer mr-2 w-8 md:w-12 h-8 md:h-12 p-3 bg-gray-400 dark:bg-gray-700 rounded-full flex justify-center items-center">
-                <font-awesome-icon v-if='isDark' class="text-lg md:text-xl text-slate-900 dark:text-slate-100"
+                class="cursor-pointer mr-2 w-8 md:w-12 h-8 md:h-12 p-3 bg-gray-400 dark:bg-gray-700 rounded-full flex justify-center items-center group hover:bg-slate-900 dark:hover:bg-slate-100 transition-all ease-in-out duration-500">
+                <font-awesome-icon v-if='isDark' class="text-lg md:text-xl text-slate-900 dark:text-slate-100 group-hover:text-slate-100 dark:group-hover:text-slate-900"
                   icon="fa-regular fa-sun" />
-                <font-awesome-icon v-else class="text-lg md:text-xl text-slate-900 dark:text-slate-100"
+                <font-awesome-icon v-else class="text-lg md:text-xl text-slate-900 dark:text-slate-100 group-hover:text-slate-100 dark:group-hover:text-slate-900"
                   icon="fa-regular fa-moon" />
               </div>
               <div
-                class="cursor-pointer mr-2 w-8 md:w-12 h-8 md:h-12 p-3 bg-gray-400 dark:bg-gray-700 rounded-full flex justify-center items-center">
-                <font-awesome-icon class="text-lg md:text-xl text-slate-900 dark:text-slate-100"
+                class="cursor-pointer mr-2 w-8 md:w-12 h-8 md:h-12 p-3 bg-gray-400 dark:bg-gray-700 rounded-full flex justify-center items-center group hover:bg-slate-900 dark:hover:bg-slate-100 transition-all ease-in-out duration-500">
+                <font-awesome-icon class="text-lg md:text-xl text-slate-900 dark:text-slate-100 group-hover:text-slate-100 dark:group-hover:text-slate-900"
                   icon="fa-solid fa-trash-can" />
               </div>
               <div
-                class="cursor-pointer w-8 md:w-12 h-8 md:h-12 p-3 bg-gray-400 dark:bg-gray-700 rounded-full flex justify-center items-center">
-                <font-awesome-icon class="text-lg md:text-xl text-slate-900 dark:text-slate-100"
+                class="group cursor-pointer w-8 md:w-12 h-8 md:h-12 p-3 bg-gray-400 dark:bg-gray-700 rounded-full flex justify-center items-center hover:bg-slate-900 dark:hover:bg-slate-100 transition-all ease-in-out duration-500">
+                <font-awesome-icon class="text-lg md:text-xl text-slate-900 dark:text-slate-100 group-hover:text-slate-100 dark:group-hover:text-slate-900"
                   icon="fa-solid fa-share-nodes" />
               </div>
             </div>
